@@ -1,0 +1,15 @@
+{
+  "name": "api-projectz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kairath",
+  "license": "ISC",
+  "dependencies": {
+    "express-generator": "^4.13.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}
