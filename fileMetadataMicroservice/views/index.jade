@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1.text-center.col-md-6.col-md-offset-3 API Basejump: File Metadata Microservice
+  form.form-group.col-md-6.col-md-offset-3(action="/upload", method="post", enctype="multipart/form-data", name="file")
+    input.form-control(type="file", name="file")
+    input.form-control(type="submit", value="upload")
+    
+
