@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div.container
+    h1.text-center.col-md-6.col-md-offset-3 API Basejump: URL Shortener
+    div.container.col-md-12.text-center 
+      h3 User stories:
+      p I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
+      p When I visit that shortened URL, it will redirect me to my original link.
+      h4 Example creation usage:
+      p https://mighty-springs-1900.herokuapp.com/https://www.google.com 
+      p https://mighty-springs-1900.herokuapp.com/http://freecodecamp.com/news
+      h4 Example creation output:
+      p{ "original_url": "http://freecodecamp.com/news", "short_url": "https://mighty-springs-1900.herokuapp.com/4" }
+      h4 Usage:
+      p https://mighty-springs-1900.herokuapp.com/4
+      p Will redirect to:
+      p original_url aka http://freecodecamp.com/news
+      p Such an awsome api.
+      hr
+      a(href="https://github.com/thekairath" target="_blank") Kairath/Github
+      
