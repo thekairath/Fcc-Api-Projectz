@@ -7,20 +7,14 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get("/:url",function(req, res, next) {
+router.get("/:url(*)",function(req, res, next) {
+  var reqUrl = req.params.url
   
-  var reqUrl = req.url.substr(1,req.url.length);
-  
-  console.log(reqUrl);
-  console.log(urls);
-  var regex = /^(http:\/\/|https:\/\/)?(w){3}\.(\w)+\.(com){1}$/i;
+  console.log(reqUrl.match(regex));
+  var regex = /^(http:\/\/|https:\/\/)?((w){3})?\.?(\w)+\.(com){1}\/*\w*/i;
   if(urls[reqUrl]){
     if(!!urls[reqUrl]){
-      if(reqUrl.match(/^http(s)?:\/\//i)){
-        res.redirect(urls[req.url.substr(1,req.url.length)]);
-      } else {
-        res.redirect("https://" + urls[reqUrl]);
-      }
+      res.redirect(urls[reqUrl]);
     }  
   }
   else if(reqUrl.match(regex)){
